@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product details Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- import-poppins-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6bd6c771de.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="product-page-container">
+        <!-- route======= -->
+         <span class="link-route">
+            <a href="#">Home</a><a href="#">Sofa</a>
+         </span>
+         <!-- ====Product-details-section========== -->
+        <section id="product-page">
+            <div class="product-page-img">
+                <!-- <img src="" alt=""> -->
+                <iframe title="Relax Sofa - White" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/187c64fecdbc4e0c87054b71c74f06d6/embed?autospin=1&autostart=1&camera=0"> </iframe>
+            </div>
+            <div class="product-page-details">
+                <!-- ===title====== -->
+                 <strong>New Luxury Sofa</strong>
+                 <span class="product-category">
+                    Luxury - sofa
+                 </span>
+                 <!-- price -->
+                <span class="price">$70<del>$100</del></span>
+                <!-- details -->
+                <p class="small-desc">Welcome to your living space a whole new level of comfort with Duroflex's Zivo Plus! Made with trusted Duroflex Foam, this sofa is an effortless blend of plush comfort and durability. Made from solid wood the sofa frame has a rigid structure and retains its shape for a long time. Designed keeping comfort in focus with a clean look, this sofa comes with high-quality webbing and plush backrest for enhanced back support. The fabric is resistant to pilling and colour fading, meeting the expectations of modern day homekeepers. What more? Zivo Plus has passed European norms of safety, strength and durability.
+
+                </p>
+                <!-- options -->
+                <div class="product-options">
+                    <span>Color's</span>
+                    <!-- color-option-container -->
+                    <div class="product-color-options">
+                        <!-- ====color-box==== -->
+                        <div class="product-color-box">
+                            <input type="checkbox" id="blue" value="blue"/>
+                            <label for="blue">
+                                <img src="images/blue.jpg"/>
+                            </label>
+                        </div>
+                        <div class="product-color-box">
+                            <input type="checkbox" id="red" value="red"/>
+                            <label for="red">
+                                <img src="images/red.jpg"/>
+                            </label>
+                        </div>
+                        
+                    </div>
+                </div>   
+                 <!-- end of product page -->
+                  <!-- discount -->
+                   <span class="product-page-offer"><i class="fa-solid fa-tag"></i>20% Discount</span>
+                   <div class="cart-btns">
+                    <a href="#" class="add-cart">Add to Cart</a>
+                    <a href="#" class="add-cart buy-now">Buy Now</a>
+                   </div>
+                   <!-- ==Price-and-shipping==== -->
+                    <div class="price-shipping">
+                        <strong>20$<span> + 1$ Shipping</span></strong>
+                    </div>
+
+
+
+            </div>
+        </section>
+        <!-- ====Product-all-info -->
+         <section class="product-all-info">
+            <ul class="product-info-menu">
+                <li class="p-info-list active "data-filter="highlights">Highlights</li>
+                <li class="p-info-list"data-filter="materials">Materials</li>
+                <li class="p-info-list"data-filter="howuse">How to Use</li>
+                <li class="p-info-list"data-filter="protips">Pro Tips</li>
+                
+            </ul>
+            <div class="info-container highlights active">
+                <p>A sofa's frame is usually made of wood, but can also be made of steel, plastic, or laminated boards. A quality sofa has a sturdy frame with glued and dowelled joints, and screwed corner blocks in important areas.</p>
+            </div>
+            <div class="info-container materials">
+                <p>An age-old favourite, leather is a no-brainer when it comes to sofas of any style. It’s easy to clean, holds up well over time and comes in a variety of colours, finishes and textures that deliver on visual appeal. Leather sofa material is so popular because it has a stain-resistant finish, making it ideal for houses with high footfall in the living area. That said, leather is quite vulnerable to scratches and may develop cracks if the levels of humidity fluctuate.</p>
+            </div>
+            <div class="info-container howuse">
+                <p>The type of sofa you choose and how you arrange it depends on the room's layout, your comfort needs, and your personal preference. For example, an L-shaped sofa can be placed against a wall to maximize seating and floor space. A U-shaped sectional can be used for extra seating, while a cuddle sectional is good for snuggling. 
+                </p>
+            </div>
+            <div class="info-container protips">
+                <p>The sofa you choose should fit your lifestyle and needs.
+                    Measure and create a floor plan of your room so you know the sofa will fit perfectly.
+                    Choose a sofa that’s both stylish and comfortable.</p>
+            </div>
+         </section>
+
+
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('input:checkbox').click(function(){
+                $('input:checkbox').not(this).prop('checked',false);
+            })
+        })
+        $(document).on('click','.product-info-menu li',function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+        $(document).ready(function(){
+            $('.p-info-list').click(function(){
+                const value= $(this).attr('data-filter');
+                if(value=='all'){
+                    $('.info-container').filter('.'+value).show('1000');
+                }
+                else{
+                    $('.info-container').not('.'+value).hide('1000')
+                    $('.info-container').not('.'+value).show('1000')
+                }
+            })
+        })
+    </script>
+    
+</body>
+</html>
